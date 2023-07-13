@@ -154,7 +154,7 @@
         }
       });
       next =
-        imagesCollection[index] ||
+        imagesCollection[--index] ||
         imagesCollection[imagesCollection.length - 1];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
@@ -192,7 +192,7 @@
           index = i;
         }
       });
-      next = imagesCollection[index] || imagesCollection[0];
+      next = imagesCollection[++index] || imagesCollection[0];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     createLightBox(gallery, lightboxId, navigation) {
@@ -236,11 +236,16 @@
       }
     },
     filterByTag() {
-      if ($(this).hasClass("active-tag")) {
+      var that = $(this)
+
+      if (that.hasClass("active")) {
         return;
       }
-      $(".active-tag").removeClass("active active-tag");
-      $(this).addClass("active-tag");
+
+      $('.nav-item > .nav-link').each(function(i) {
+          $(this).removeClass("active");
+          that.addClass("active");
+      })
 
       var tag = $(this).data("images-toggle");
 
