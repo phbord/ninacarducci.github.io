@@ -18,8 +18,10 @@ body {
 	align-items: center;
 }
 
-.top-header .name {
+.top-header .name a {
+	color: #000;
 	font-size: 26px;
+	text-decoration: none;
 }
 
 .nav ul {
@@ -255,7 +257,7 @@ input[type="submit"] {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
+	#about-me h3, #about-me p {
 		width: 100%;
 	}
 }
