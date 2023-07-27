@@ -79,7 +79,7 @@
     wrapItemInColumn(element, columns) {
       if (columns.constructor === Number) {
         element.wrap(
-          `<div class='item-column mb-4 col-${Math.ceil(12 / columns)}'></div>`
+          `<div class='item-column mb-4 col-${Math.ceil(12 / columns)}' role='listitem' tabindex='-1' itemprop='associatedMedia' itemscope itemtype='https://schema.org/ImageObject'></div>`
         );
       } else if (columns.constructor === Object) {
         var columnClasses = "";
@@ -98,7 +98,7 @@
         if (columns.xl) {
           columnClasses += ` col-xl-${Math.ceil(12 / columns.xl)}`;
         }
-        element.wrap(`<div class='item-column mb-4${columnClasses}'></div>`);
+        element.wrap(`<div class='item-column mb-4${columnClasses}' role='listitem' tabindex='-1' itemprop='associatedMedia' itemscope itemtype='https://schema.org/ImageObject'></div>`);
       } else {
         console.error(
           `Columns should be defined as numbers or objects. ${typeof columns} is not supported.`
@@ -220,12 +220,12 @@
     },
     showItemTags(gallery, position, tags) {
       var tagItems =
-        '<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';
+        '<li class="nav-item" role="option" aria-selected="true"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';
       $.each(tags, function(index, value) {
-        tagItems += `<li class="nav-item active">
-                <span class="nav-link"  data-images-toggle="${value}">${value}</span></li>`;
+        tagItems += `<li class="nav-item active" role="option" aria-selected="false">
+                <span class="nav-link" data-images-toggle="${value}">${value}</span></li>`;
       });
-      var tagsRow = `<ul class="my-4 tags-bar nav nav-pills">${tagItems}</ul>`;
+      var tagsRow = `<ul class="my-4 tags-bar nav nav-pills" role="listbox">${tagItems}</ul>`;
 
       if (position === "bottom") {
         gallery.append(tagsRow);
