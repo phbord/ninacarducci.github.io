@@ -33,11 +33,11 @@
 	<link rel="stylesheet" href="./assets/style.min.css">
 </head>
 <body>
-	<header class="top-header" role="banner" itemscope itemtype="https://schema.org/WPHeader">
+	<header class="top-header" role="banner">
 		<h1 class="name" itemprop="headline">
 			<a href="/" aria-label="Accueil">Nina Carducci</a>
 		</h1>
-		<nav class="nav" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">   
+		<nav class="nav" role="navigation">   
 			<ul>
 				<li itemprop="name"><a href="#about">À propos</a></li>
 				<li itemprop="name"><a href="#gallery">Galerie</a></li>
@@ -53,7 +53,7 @@
 	</header>
 	<main role="main">
 
-		<div id="carousel-container" aria-label="Carrousel" aria-roledescription="carrousel" aria-live="polite" itemscope itemtype="https://schema.org/ImageGallery">
+		<div id="carousel-container" aria-label="Carrousel" aria-roledescription="carrousel" aria-live="polite">
 			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 				<div class="carousel-indicators">
 					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -61,23 +61,20 @@
 					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
 				</div>
 				<div class="carousel-inner">
-					<div class="carousel-item active" aria-hidden="false" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject">
+					<div class="carousel-item active" aria-hidden="false">
 						<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" 
 									class="d-block w-100" 
-									alt="homme de dos traversant un passage clouté" 
-									itemprop="thumbnail">
+									alt="homme de dos traversant un passage clouté">
 					</div>
-					<div class="carousel-item" aria-hidden="true" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject">
+					<div class="carousel-item" aria-hidden="true">
 						<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" 
 									class="d-block w-100" 
-									alt="public de face dans un concert" 
-									itemprop="thumbnail">
+									alt="public de face dans un concert">
 					</div>
-					<div class="carousel-item" aria-hidden="true" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject">
+					<div class="carousel-item" aria-hidden="true">
 						<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp" 
 									class="d-block w-100" 
-									alt="mariés s'embrassant sur une piste de danse" 
-									itemprop="thumbnail">
+									alt="mariés s'embrassant sur une piste de danse">
 					</div>
 				</div>
 				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -91,31 +88,32 @@
 			</div>
 		</div>
 
-		<article id="about" role="article" aria-label="Informations sur Nina Carducci" itemscope itemtype="https://schema.org/Photograph">
+		<article id="about" role="article" aria-label="Informations sur Nina Carducci" 
+							itemscope itemtype="https://schema.org/Photograph">
 			<figure class="picture left">
 				<img src="./assets/images/nina.webp" alt="Photo de Nina Carducci" itemprop="image">
 			</figure>
 			<div id="about-me">
-				<h2 class="about-me__title" role="heading" aria-level="2" itemprop="name">A propos de moi</h2>
+				<h2 class="about-me__title" role="heading" aria-level="2" itemprop="subjectOf">A propos de moi</h2>
 				<h3 class="about-me__introduction" role="heading" aria-level="3" itemprop="disambiguatingDescription">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h3>
 				<p itemprop="description" itemprop="description">Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
 					C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 			</div>
 		</article>
 
-		<section id="gallery" role="region" aria-label="Galerie de photos" aria-live="polite" itemscope itemtype="https://schema.org/ImageGallery">
-			<h2 class="title" role="heading" aria-level="2" itemprop="name">Portfolio</h2>
+		<section id="gallery" role="region" aria-label="Galerie de photos" aria-live="polite">
+			<h2 class="title" role="heading" aria-level="2">Portfolio</h2>
 			<div class="container py-3">
 				<div class="gallery" style="display: none" role="list" aria-label="Photos" tabindex="0">
-					<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="plafond et lumières d'une salle de concert" itemprop="thumbnail">
-					<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" alt="homme en costume les bras croisés" itemprop="thumbnail">
-					<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp" alt="employée souriante de profil" itemprop="thumbnail">
-					<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp" alt="mains qui se touchent" itemprop="thumbnail">
-					<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp" alt="homme barbu de face les yeux fermés" itemprop="thumbnail">
-					<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp" alt="deux mariés souriants entourés de palmiers" itemprop="thumbnail">
-					<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp" alt="femme aux lunettes près d'un grillage" itemprop="thumbnail">
-					<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp" alt="chanteur sur scène entouré de fumigènes" itemprop="thumbnail">
-					<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp" alt="femme souriant devant un laptop" itemprop="thumbnail">
+					<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="plafond et lumières d'une salle de concert">
+					<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" alt="homme en costume les bras croisés">
+					<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp" alt="employée souriante de profil">
+					<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp" alt="mains qui se touchent">
+					<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp" alt="homme barbu de face les yeux fermés">
+					<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp" alt="deux mariés souriants entourés de palmiers">
+					<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp" alt="femme aux lunettes près d'un grillage">
+					<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp" alt="chanteur sur scène entouré de fumigènes">
+					<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp" alt="femme souriant devant un laptop">
 				</div>
 			</div>
 			<div class="quote">
@@ -128,33 +126,33 @@
 			</div>
 		</section>
 
-		<section id="services" itemscope itemtype="https://schema.org/ItemPage">
-			<h2 class="title" itemprop="name">Mes services</h2>
+		<section id="services">
+			<h2 class="title">Mes services</h2>
 			<ul class="container" role="list">
-				<li class="service" role="listitem" itemscope itemtype="https://schema.org/Service">
+				<li class="service" role="listitem">
 					<div class="service__description">
-						<h3 itemprop="name">Shooting photo</h3>
-						<p itemprop="description">Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
+						<h3>Shooting photo</h3>
+						<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
 					</div>
 					<div class="service__price">
 						<h4>350€/demi journée</h4>
 						<span>Matériel, déplacement inclus</span>
 					</div>
 				</li>
-				<li class="service" role="listitem" itemscope itemtype="https://schema.org/Service">
+				<li class="service" role="listitem">
 					<div class="service__description">
-						<h3 itemprop="name">Retouches</h3>
-						<p itemprop="description">Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
+						<h3>Retouches</h3>
+						<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
 					</div>
 					<div class="service__price">
 						<h4>50€/photo</h4>
 						<span>2 AR par photo</span>
 					</div>
 				</li>
-				<li class="service" role="listitem" itemscope itemtype="https://schema.org/Service">
+				<li class="service" role="listitem">
 					<div class="service__description">
-						<h3 itemprop="name">Album photos</h3>
-						<p itemprop="description">Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé</p>
+						<h3>Album photos</h3>
+						<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé</p>
 					</div>
 					<div class="service__price">
 						<h4>400€ album A4</h4>
@@ -164,7 +162,7 @@
 			</ul>
 		</section>
 
-		<section class="quote" itemscope itemtype="https://schema.org/Quotation">
+		<section class="quote">
 			<figure>
 				<blockquote>
 					<h2 class="quote__text" 
