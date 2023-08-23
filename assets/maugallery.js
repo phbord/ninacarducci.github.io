@@ -79,7 +79,7 @@
     wrapItemInColumn(element, columns) {
       if (columns.constructor === Number) {
         element.wrap(
-          `<div class='item-column mb-4 col-${Math.ceil(12 / columns)}' role='listitem' tabindex='-1' itemprop='associatedMedia' itemscope itemtype='https://schema.org/ImageObject'></div>`
+          `<div class='item-column mb-4 col-${Math.ceil(12 / columns)}' role='listitem' tabindex='-1'></div>`
         );
       } else if (columns.constructor === Object) {
         var columnClasses = "";
@@ -98,7 +98,7 @@
         if (columns.xl) {
           columnClasses += ` col-xl-${Math.ceil(12 / columns.xl)}`;
         }
-        element.wrap(`<div class='item-column mb-4${columnClasses}' role='listitem' tabindex='-1' itemprop='associatedMedia' itemscope itemtype='https://schema.org/ImageObject'></div>`);
+        element.wrap(`<div class='item-column mb-4${columnClasses}' role='listitem' tabindex='-1'></div>`);
       } else {
         console.error(
           `Columns should be defined as numbers or objects. ${typeof columns} is not supported.`
